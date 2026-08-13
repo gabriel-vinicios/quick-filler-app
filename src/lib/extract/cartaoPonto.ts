@@ -210,11 +210,11 @@ export function parseCartaoPontoPage(pageText: string, pageNum: number, confiden
   return { page: pageNum, days };
 }
 
-export function extractCartaoPonto(pdfPath: string): CartaoPontoValue {
-  const pageCount = getPageCount(pdfPath);
+export async function extractCartaoPonto(pdfPath: string): Promise<CartaoPontoValue> {
+  const pageCount = await getPageCount(pdfPath);
   const pages: CartaoPontoPage[] = [];
   for (let p = 1; p <= pageCount; p++) {
-    const { text, ocrConfidence } = readPage(pdfPath, p);
+    const { text, ocrConfidence } = await readPage(pdfPath, p);
     pages.push(parseCartaoPontoPage(text, p, ocrConfidence));
   }
   return { pages };

@@ -128,11 +128,11 @@ export function parseHoleritePage(pageText: string, pageNum: number, confidence:
   return pages;
 }
 
-export function extractHolerite(pdfPath: string): HoleriteValue {
-  const pageCount = getPageCount(pdfPath);
+export async function extractHolerite(pdfPath: string): Promise<HoleriteValue> {
+  const pageCount = await getPageCount(pdfPath);
   const pages: HoleritePage[] = [];
   for (let p = 1; p <= pageCount; p++) {
-    const { text, ocrConfidence } = readPage(pdfPath, p);
+    const { text, ocrConfidence } = await readPage(pdfPath, p);
     pages.push(...parseHoleritePage(text, p, ocrConfidence));
   }
   return { pages };
