@@ -1,0 +1,1146 @@
+{
+  "pages": [
+    {
+      "page": 1,
+      "year": "2018",
+      "month": "08",
+      "fields": [
+        {
+          "code": "",
+          "label": "VENCIMENTO PADRAO-VP",
+          "reference": "",
+          "value": "3.059,94"
+        },
+        {
+          "code": "",
+          "label": "ADICIONAL POR MERITO",
+          "reference": "",
+          "value": "602,14"
+        },
+        {
+          "code": "",
+          "label": "ABF-ADIC.BASICO DE FUNCAO",
+          "reference": "",
+          "value": "1.896,19"
+        },
+        {
+          "code": "",
+          "label": "ATFC-AD.TEMP.FATORES/COMI",
+          "reference": "",
+          "value": "630,36"
+        },
+        {
+          "code": "",
+          "label": "PREVI PESSOAL PB2",
+          "reference": "6.188,63",
+          "value": "-433,20"
+        },
+        {
+          "code": "",
+          "label": "PREVI PES.MENSAL PB2-2B",
+          "reference": "6.188,63",
+          "value": "-61,88"
+        },
+        {
+          "code": "",
+          "label": "CONTR. TEMPORARIA - CASSI",
+          "reference": "6.188,63",
+          "value": "-61,88"
+        },
+        {
+          "code": "",
+          "label": "CASSI PESSOAL",
+          "reference": "6.188,63",
+          "value": "-185,65"
+        },
+        {
+          "code": "",
+          "label": "INSS-CONTR.PESSOAL",
+          "reference": "5.645,80",
+          "value": "-621,03"
+        },
+        {
+          "code": "",
+          "label": "IMPOSTO DE RENDA-FONTE",
+          "reference": "4.882,93",
+          "value": "-473,44"
+        },
+        {
+          "code": "",
+          "label": "Remuneração Função Vl. Ref.",
+          "reference": "",
+          "value": "5.017,04"
+        },
+        {
+          "code": "",
+          "label": "Proventos Retidos",
+          "reference": "",
+          "value": "0,00"
+        },
+        {
+          "code": "",
+          "label": "Proventos Bruto",
+          "reference": "",
+          "value": "6.188,63"
+        },
+        {
+          "code": "",
+          "label": "Adiantamento 13o.",
+          "reference": "",
+          "value": "3.094,31"
+        },
+        {
+          "code": "",
+          "label": "Margem (30%)",
+          "reference": "",
+          "value": "1.113,97"
+        },
+        {
+          "code": "",
+          "label": "Consignação",
+          "reference": "",
+          "value": "1.837,08"
+        },
+        {
+          "code": "",
+          "label": "Margem (70%)",
+          "reference": "",
+          "value": "2.494,96"
+        }
+      ],
+      "bases": [
+        {
+          "label": "Provisão FGTS",
+          "value": "495,09"
+        },
+        {
+          "label": "Proventos Líquidos",
+          "value": "4.351,55"
+        }
+      ]
+    },
+    {
+      "page": 1,
+      "year": "2018",
+      "month": "08",
+      "fields": [
+        {
+          "code": "",
+          "label": "HORA EXTRA-BCO HORAS-CONV",
+          "reference": "JULHO/18",
+          "value": "-12,89"
+        },
+        {
+          "code": "",
+          "label": "CASSI-PARTICIPACOES",
+          "reference": "",
+          "value": "-67,72"
+        },
+        {
+          "code": "",
+          "label": "CASSI CO-PARTICIPACAO",
+          "reference": "",
+          "value": "-0,54"
+        },
+        {
+          "code": "",
+          "label": "PREVI PESSOAL PB2",
+          "reference": "AC.SIST/0718",
+          "value": "0,90"
+        },
+        {
+          "code": "",
+          "label": "PREVI PES.MENSAL PB2-2B",
+          "reference": "JULHO/18",
+          "value": "0,12"
+        },
+        {
+          "code": "",
+          "label": "CONTR. TEMPORARIA - CASSI",
+          "reference": "JULHO/18",
+          "value": "0,12"
+        },
+        {
+          "code": "",
+          "label": "CASSI PESSOAL",
+          "reference": "JULHO/18",
+          "value": "0,38"
+        },
+        {
+          "code": "",
+          "label": "IMPOSTO DE RENDA-FONTE",
+          "reference": "11,87",
+          "value": "3,26"
+        },
+        {
+          "code": "",
+          "label": "Proventos Retidos",
+          "reference": "",
+          "value": "0,00"
+        },
+        {
+          "code": "",
+          "label": "Proventos Bruto",
+          "reference": "",
+          "value": "-12,89"
+        },
+        {
+          "code": "",
+          "label": "Adiantamento 13o.",
+          "reference": "",
+          "value": "0,00"
+        },
+        {
+          "code": "",
+          "label": "Margem (30%)",
+          "reference": "",
+          "value": "0,00"
+        },
+        {
+          "code": "",
+          "label": "Consignação",
+          "reference": "",
+          "value": "63,48"
+        },
+        {
+          "code": "",
+          "label": "Margem (70%)",
+          "reference": "",
+          "value": "0,00"
+        },
+        {
+          "code": "",
+          "label": "1/",
+          "reference": "",
+          "value": "98"
+        }
+      ],
+      "bases": [
+        {
+          "label": "Provisão FGTS",
+          "value": "-1,04"
+        },
+        {
+          "label": "Proventos Líquidos",
+          "value": "-76,37"
+        }
+      ]
+    },
+    {
+      "page": 2,
+      "year": "2018",
+      "month": "09",
+      "fields": [
+        {
+          "code": "",
+          "label": "VENCIMENTO PADRAO-VP",
+          "reference": "",
+          "value": "3.212,93"
+        },
+        {
+          "code": "",
+          "label": "ADICIONAL POR MERITO",
+          "reference": "",
+          "value": "632,24"
+        },
+        {
+          "code": "",
+          "label": "ABF-ADIC.BASICO DE FUNCAO",
+          "reference": "",
+          "value": "1.990,99"
+        },
+        {
+          "code": "",
+          "label": "ATFC-AD.TEMP.FATORES/COMI",
+          "reference": "",
+          "value": "661,87"
+        },
+        {
+          "code": "",
+          "label": "PREVI PESSOAL PB2",
+          "reference": "6.498,03",
+          "value": "-454,86"
+        },
+        {
+          "code": "",
+          "label": "PREVI PES.MENSAL PB2-2B",
+          "reference": "6.498,03",
+          "value": "-64,98"
+        },
+        {
+          "code": "",
+          "label": "CONTR. TEMPORARIA - CASSI",
+          "reference": "6.498,03",
+          "value": "-64,98"
+        },
+        {
+          "code": "",
+          "label": "CASSI PESSOAL",
+          "reference": "6.498,03",
+          "value": "-194,93"
+        },
+        {
+          "code": "",
+          "label": "INSS-CONTR.PESSOAL",
+          "reference": "5.645,80",
+          "value": "-621,03"
+        },
+        {
+          "code": "",
+          "label": "IMPOSTO DE RENDA-FONTE",
+          "reference": "5.167,57",
+          "value": "-551,72"
+        },
+        {
+          "code": "",
+          "label": "Remuneração Função Vl. Ref.",
+          "reference": "",
+          "value": "5.267,89"
+        },
+        {
+          "code": "",
+          "label": "Proventos Retidos",
+          "reference": "",
+          "value": "0,00"
+        },
+        {
+          "code": "",
+          "label": "Proventos Bruto",
+          "reference": "",
+          "value": "6.498,03"
+        },
+        {
+          "code": "",
+          "label": "Adiantamento 13o.",
+          "reference": "",
+          "value": "3.094,31"
+        },
+        {
+          "code": "",
+          "label": "Margem (30%)",
+          "reference": "",
+          "value": "1.169,65"
+        },
+        {
+          "code": "",
+          "label": "Consignação",
+          "reference": "",
+          "value": "1.952,50"
+        },
+        {
+          "code": "",
+          "label": "Margem (70%)",
+          "reference": "",
+          "value": "2.596,12"
+        }
+      ],
+      "bases": [
+        {
+          "label": "Provisão FGTS",
+          "value": "519,84"
+        },
+        {
+          "label": "Proventos Líquidos",
+          "value": "4.545,53"
+        }
+      ]
+    },
+    {
+      "page": 2,
+      "year": "2018",
+      "month": "09",
+      "fields": [
+        {
+          "code": "",
+          "label": "HORA EXTRA-BCO HORAS-CONV",
+          "reference": "AGOSTO/18",
+          "value": "-16,24"
+        },
+        {
+          "code": "",
+          "label": "CASSI-ASSISTENCIA FARMACE",
+          "reference": "",
+          "value": "-2,44"
+        },
+        {
+          "code": "",
+          "label": "CONTRIBUICAO NEGOCIAL",
+          "reference": "",
+          "value": "-97,47"
+        },
+        {
+          "code": "",
+          "label": "CONTRIBUICAO NEGOCIAL",
+          "reference": "",
+          "value": "-76,12"
+        },
+        {
+          "code": "",
+          "label": "CASSI-PARTICIPACOES",
+          "reference": "",
+          "value": "-81,13"
+        },
+        {
+          "code": "",
+          "label": "CASSI CO-PARTICIPACAO",
+          "reference": "",
+          "value": "-57,91"
+        },
+        {
+          "code": "",
+          "label": "PREVI PESSOAL PB2",
+          "reference": "AC.SIST/0818",
+          "value": "1,14"
+        },
+        {
+          "code": "",
+          "label": "PREVI PES.MENSAL PB2-2B",
+          "reference": "AGOSTO/18",
+          "value": "0,16"
+        },
+        {
+          "code": "",
+          "label": "CONTR. TEMPORARIA - CASSI",
+          "reference": "AGOSTO/18",
+          "value": "0,16"
+        },
+        {
+          "code": "",
+          "label": "CASSI PESSOAL",
+          "reference": "AGOSTO/18",
+          "value": "0,48"
+        },
+        {
+          "code": "",
+          "label": "IMPOSTO DE RENDA-FONTE",
+          "reference": "14,94",
+          "value": "4,11"
+        },
+        {
+          "code": "",
+          "label": "Proventos Retidos",
+          "reference": "",
+          "value": "0,00"
+        },
+        {
+          "code": "",
+          "label": "Proventos Bruto",
+          "reference": "",
+          "value": "-16,24"
+        },
+        {
+          "code": "",
+          "label": "Adiantamento 13o.",
+          "reference": "",
+          "value": "0,00"
+        },
+        {
+          "code": "",
+          "label": "Margem (30%)",
+          "reference": "",
+          "value": "0,00"
+        },
+        {
+          "code": "",
+          "label": "Consignação",
+          "reference": "",
+          "value": "309,02"
+        },
+        {
+          "code": "",
+          "label": "Margem (70%)",
+          "reference": "",
+          "value": "0,00"
+        },
+        {
+          "code": "",
+          "label": "2/",
+          "reference": "",
+          "value": "98"
+        }
+      ],
+      "bases": [
+        {
+          "label": "Provisão FGTS",
+          "value": "-1,30"
+        },
+        {
+          "label": "Proventos Líquidos",
+          "value": "-325,26"
+        }
+      ]
+    },
+    {
+      "page": 3,
+      "year": "2018",
+      "month": "10",
+      "fields": [
+        {
+          "code": "",
+          "label": "VENCIMENTO PADRAO-VP",
+          "reference": "",
+          "value": "428,59"
+        },
+        {
+          "code": "",
+          "label": "ADICIONAL POR MERITO",
+          "reference": "",
+          "value": "84,42"
+        },
+        {
+          "code": "",
+          "label": "ABF-ADIC.BASICO DE FUNCAO",
+          "reference": "",
+          "value": "265,63"
+        },
+        {
+          "code": "",
+          "label": "ATFC-AD.TEMP.FATORES/COMI",
+          "reference": "",
+          "value": "88,31"
+        },
+        {
+          "code": "",
+          "label": "ADICIONAL DE FERIAS",
+          "reference": "",
+          "value": "1.877,01"
+        },
+        {
+          "code": "",
+          "label": "PROVENTOS FERIAS",
+          "reference": "",
+          "value": "5.631,08"
+        },
+        {
+          "code": "",
+          "label": "PREVI PESSOAL PB2",
+          "reference": "8.375,04",
+          "value": "-586,25"
+        },
+        {
+          "code": "",
+          "label": "PREVI PES.MENSAL PB2-2B",
+          "reference": "8.375,04",
+          "value": "-167,49"
+        },
+        {
+          "code": "",
+          "label": "CONTR. TEMPORARIA - CASSI",
+          "reference": "8.375,04",
+          "value": "-83,74"
+        },
+        {
+          "code": "",
+          "label": "CASSI PESSOAL",
+          "reference": "8.375,04",
+          "value": "-251,25"
+        },
+        {
+          "code": "",
+          "label": "INSS-CONTR.PESSOAL",
+          "reference": "5.645,80",
+          "value": "-621,03"
+        },
+        {
+          "code": "",
+          "label": "Remuneração Função Vl. Ref.",
+          "reference": "",
+          "value": "5.267,89"
+        },
+        {
+          "code": "",
+          "label": "Proventos Retidos",
+          "reference": "",
+          "value": "0,00"
+        },
+        {
+          "code": "",
+          "label": "Proventos Bruto",
+          "reference": "",
+          "value": "8.375,04"
+        },
+        {
+          "code": "",
+          "label": "Adiantamento 13o.",
+          "reference": "",
+          "value": "3.094,31"
+        },
+        {
+          "code": "",
+          "label": "Margem (30%)",
+          "reference": "",
+          "value": "860,67"
+        },
+        {
+          "code": "",
+          "label": "Consignação",
+          "reference": "",
+          "value": "1.709,76"
+        },
+        {
+          "code": "",
+          "label": "Margem (70%)",
+          "reference": "",
+          "value": "2.838,86"
+        }
+      ],
+      "bases": [
+        {
+          "label": "Provisão FGTS",
+          "value": "670,00"
+        },
+        {
+          "label": "Proventos Líquidos",
+          "value": "6.665,28"
+        }
+      ]
+    },
+    {
+      "page": 3,
+      "year": "2018",
+      "month": "10",
+      "fields": [
+        {
+          "code": "",
+          "label": "FERIAS-CONVERSAO ESPECIE",
+          "reference": "",
+          "value": "1.155,21"
+        },
+        {
+          "code": "",
+          "label": "ANTECIPACAO ADIC. FERIAS",
+          "reference": "",
+          "value": "-1.877,21"
+        },
+        {
+          "code": "",
+          "label": "ANTEC. DE PROVENTOS - FER",
+          "reference": "",
+          "value": "-5.631,63"
+        },
+        {
+          "code": "",
+          "label": "ANTEC.CONVERS-FER/LP/AB/F",
+          "reference": "",
+          "value": "-1.155,21"
+        },
+        {
+          "code": "",
+          "label": "CASSI-PARTICIPACOES",
+          "reference": "",
+          "value": "-49,82"
+        },
+        {
+          "code": "",
+          "label": "CASSI CO-PARTICIPACAO",
+          "reference": "",
+          "value": "-25,46"
+        },
+        {
+          "code": "",
+          "label": "OUTROS DESCONTOS FERIAS",
+          "reference": "",
+          "value": "300,35"
+        },
+        {
+          "code": "",
+          "label": "INSS FERIAS",
+          "reference": "",
+          "value": "621,04"
+        },
+        {
+          "code": "",
+          "label": "PREVIDENCIA COMPL. FERIAS",
+          "reference": "",
+          "value": "600,70"
+        },
+        {
+          "code": "",
+          "label": "Proventos Retidos",
+          "reference": "",
+          "value": "0,00"
+        },
+        {
+          "code": "",
+          "label": "Proventos Bruto",
+          "reference": "",
+          "value": "1.155,21"
+        },
+        {
+          "code": "",
+          "label": "Adiantamento 13o.",
+          "reference": "",
+          "value": "0,00"
+        },
+        {
+          "code": "",
+          "label": "Margem (30%)",
+          "reference": "",
+          "value": "0,00"
+        },
+        {
+          "code": "",
+          "label": "Consignação",
+          "reference": "",
+          "value": "7.217,24"
+        },
+        {
+          "code": "",
+          "label": "Margem (70%)",
+          "reference": "",
+          "value": "0,00"
+        },
+        {
+          "code": "",
+          "label": "3/",
+          "reference": "",
+          "value": "98"
+        }
+      ],
+      "bases": [
+        {
+          "label": "Provisão FGTS",
+          "value": "0,00"
+        },
+        {
+          "label": "Proventos Líquidos",
+          "value": "-6.062,03"
+        }
+      ]
+    },
+    {
+      "page": 4,
+      "year": "2018",
+      "month": "11",
+      "fields": [
+        {
+          "code": "",
+          "label": "VENCIMENTO PADRAO-VP",
+          "reference": "",
+          "value": "3.212,93"
+        },
+        {
+          "code": "",
+          "label": "ADICIONAL POR MERITO",
+          "reference": "",
+          "value": "632,24"
+        },
+        {
+          "code": "",
+          "label": "GRATIF. NATAL-ADIANT.",
+          "reference": "",
+          "value": "-3.094,31"
+        },
+        {
+          "code": "",
+          "label": "GRATIFICACAO DE NATAL",
+          "reference": "",
+          "value": "6.498,03"
+        },
+        {
+          "code": "",
+          "label": "ABF-ADIC.BASICO DE FUNCAO",
+          "reference": "",
+          "value": "1.990,99"
+        },
+        {
+          "code": "",
+          "label": "ATFC-AD.TEMP.FATORES/COMI",
+          "reference": "",
+          "value": "661,87"
+        },
+        {
+          "code": "",
+          "label": "PREVI PESSOAL PB2",
+          "reference": "6.498,03",
+          "value": "-454,86"
+        },
+        {
+          "code": "",
+          "label": "PREVI PES.MENSAL PB2-2B",
+          "reference": "6.498,03",
+          "value": "-64,98"
+        },
+        {
+          "code": "",
+          "label": "S/13 SAL",
+          "reference": "",
+          "value": "-454,86"
+        },
+        {
+          "code": "",
+          "label": "S/13 SAL",
+          "reference": "",
+          "value": "-64,94"
+        },
+        {
+          "code": "",
+          "label": "CONTR. TEMPORARIA - CASSI",
+          "reference": "6.498,03",
+          "value": "-64,98"
+        },
+        {
+          "code": "",
+          "label": "CASSI PESSOAL",
+          "reference": "6.498,03",
+          "value": "-194,94"
+        },
+        {
+          "code": "",
+          "label": "S/13 SAL",
+          "reference": "",
+          "value": "-194,94"
+        },
+        {
+          "code": "",
+          "label": "INSS-CONTR.PESSOAL",
+          "reference": "5.645,80",
+          "value": "-621,03"
+        },
+        {
+          "code": "",
+          "label": "S/13 SAL",
+          "reference": "",
+          "value": "-621,03"
+        },
+        {
+          "code": "",
+          "label": "IMPOSTO DE RENDA-FONTE",
+          "reference": "5.167,57",
+          "value": "-551,72"
+        },
+        {
+          "code": "",
+          "label": "S/13 SAL",
+          "reference": "",
+          "value": "-551,73"
+        },
+        {
+          "code": "",
+          "label": "Remuneração Função Vl. Ref.",
+          "reference": "",
+          "value": "5.267,89"
+        },
+        {
+          "code": "",
+          "label": "Proventos Retidos",
+          "reference": "",
+          "value": "0,00"
+        },
+        {
+          "code": "",
+          "label": "Proventos Bruto",
+          "reference": "",
+          "value": "9.901,75"
+        },
+        {
+          "code": "",
+          "label": "Adiantamento 13o.",
+          "reference": "",
+          "value": "0,00"
+        },
+        {
+          "code": "",
+          "label": "Margem (30%)",
+          "reference": "",
+          "value": "1.169,64"
+        },
+        {
+          "code": "",
+          "label": "Consignação",
+          "reference": "",
+          "value": "3.840,01"
+        },
+        {
+          "code": "",
+          "label": "Margem (70%)",
+          "reference": "",
+          "value": "2.596,11"
+        }
+      ],
+      "bases": [
+        {
+          "label": "Provisão FGTS",
+          "value": "792,14"
+        },
+        {
+          "label": "Proventos Líquidos",
+          "value": "6.061,74"
+        }
+      ]
+    },
+    {
+      "page": 4,
+      "year": "2018",
+      "month": "11",
+      "fields": [
+        {
+          "code": "",
+          "label": "CASSI-PARTICIPACOES",
+          "reference": "",
+          "value": "-75,58"
+        },
+        {
+          "code": "",
+          "label": "CASSI CO-PARTICIPACAO",
+          "reference": "",
+          "value": "-2,58"
+        },
+        {
+          "code": "",
+          "label": "Proventos Retidos",
+          "reference": "",
+          "value": "0,00"
+        },
+        {
+          "code": "",
+          "label": "Proventos Bruto",
+          "reference": "",
+          "value": "0,00"
+        },
+        {
+          "code": "",
+          "label": "Adiantamento 13o.",
+          "reference": "",
+          "value": "0,00"
+        },
+        {
+          "code": "",
+          "label": "Margem (30%)",
+          "reference": "",
+          "value": "0,00"
+        },
+        {
+          "code": "",
+          "label": "Consignação",
+          "reference": "",
+          "value": "78,16"
+        },
+        {
+          "code": "",
+          "label": "Margem (70%)",
+          "reference": "",
+          "value": "0,00"
+        },
+        {
+          "code": "",
+          "label": "4/",
+          "reference": "",
+          "value": "98"
+        }
+      ],
+      "bases": [
+        {
+          "label": "Provisão FGTS",
+          "value": "0,00"
+        },
+        {
+          "label": "Proventos Líquidos",
+          "value": "-78,16"
+        }
+      ]
+    },
+    {
+      "page": 5,
+      "year": "2018",
+      "month": "12",
+      "fields": [
+        {
+          "code": "",
+          "label": "VENCIMENTO PADRAO-VP",
+          "reference": "",
+          "value": "3.212,93"
+        },
+        {
+          "code": "",
+          "label": "ADICIONAL POR MERITO",
+          "reference": "",
+          "value": "632,24"
+        },
+        {
+          "code": "",
+          "label": "ABF-ADIC.BASICO DE FUNCAO",
+          "reference": "",
+          "value": "1.990,99"
+        },
+        {
+          "code": "",
+          "label": "ATFC-AD.TEMP.FATORES/COMI",
+          "reference": "",
+          "value": "661,87"
+        },
+        {
+          "code": "",
+          "label": "PREVI PESSOAL PB2",
+          "reference": "6.498,03",
+          "value": "-454,86"
+        },
+        {
+          "code": "",
+          "label": "PREVI PES.MENSAL PB2-2B",
+          "reference": "6.498,03",
+          "value": "-64,98"
+        },
+        {
+          "code": "",
+          "label": "CONTR. TEMPORARIA - CASSI",
+          "reference": "6.498,03",
+          "value": "-64,98"
+        },
+        {
+          "code": "",
+          "label": "CASSI PESSOAL",
+          "reference": "6.498,03",
+          "value": "-194,94"
+        },
+        {
+          "code": "",
+          "label": "INSS-CONTR.PESSOAL",
+          "reference": "5.645,80",
+          "value": "-621,03"
+        },
+        {
+          "code": "",
+          "label": "IMPOSTO DE RENDA-FONTE",
+          "reference": "5.167,57",
+          "value": "-551,72"
+        },
+        {
+          "code": "",
+          "label": "Remuneração Função Vl. Ref.",
+          "reference": "",
+          "value": "5.267,89"
+        },
+        {
+          "code": "",
+          "label": "Proventos Retidos",
+          "reference": "",
+          "value": "0,00"
+        },
+        {
+          "code": "",
+          "label": "Proventos Bruto",
+          "reference": "",
+          "value": "6.498,03"
+        },
+        {
+          "code": "",
+          "label": "Adiantamento 13o.",
+          "reference": "",
+          "value": "0,00"
+        },
+        {
+          "code": "",
+          "label": "Margem (30%)",
+          "reference": "",
+          "value": "1.169,64"
+        },
+        {
+          "code": "",
+          "label": "Consignação",
+          "reference": "",
+          "value": "1.952,51"
+        },
+        {
+          "code": "",
+          "label": "Margem (70%)",
+          "reference": "",
+          "value": "2.596,11"
+        }
+      ],
+      "bases": [
+        {
+          "label": "Provisão FGTS",
+          "value": "519,84"
+        },
+        {
+          "label": "Proventos Líquidos",
+          "value": "4.545,52"
+        }
+      ]
+    },
+    {
+      "page": 5,
+      "year": "2018",
+      "month": "12",
+      "fields": [
+        {
+          "code": "",
+          "label": "CASSI-PARTICIPACOES",
+          "reference": "",
+          "value": "-88,72"
+        },
+        {
+          "code": "",
+          "label": "CASSI CO-PARTICIPACAO",
+          "reference": "",
+          "value": "-3,06"
+        },
+        {
+          "code": "",
+          "label": "IMPOSTO DE RENDA-FONTE",
+          "reference": "SETEMBRO/18",
+          "value": "-14,98"
+        },
+        {
+          "code": "",
+          "label": "S/FERIAS",
+          "reference": "",
+          "value": "14,98"
+        },
+        {
+          "code": "",
+          "label": "Proventos Retidos",
+          "reference": "",
+          "value": "0,00"
+        },
+        {
+          "code": "",
+          "label": "Proventos Bruto",
+          "reference": "",
+          "value": "0,00"
+        },
+        {
+          "code": "",
+          "label": "Adiantamento 13o.",
+          "reference": "",
+          "value": "0,00"
+        },
+        {
+          "code": "",
+          "label": "Margem (30%)",
+          "reference": "",
+          "value": "0,00"
+        },
+        {
+          "code": "",
+          "label": "Consignação",
+          "reference": "",
+          "value": "91,78"
+        },
+        {
+          "code": "",
+          "label": "Margem (70%)",
+          "reference": "",
+          "value": "0,00"
+        },
+        {
+          "code": "",
+          "label": "5/",
+          "reference": "",
+          "value": "98"
+        }
+      ],
+      "bases": [
+        {
+          "label": "Provisão FGTS",
+          "value": "0,00"
+        },
+        {
+          "label": "Proventos Líquidos",
+          "value": "-91,78"
+        }
+      ]
+    }
+  ]
+}

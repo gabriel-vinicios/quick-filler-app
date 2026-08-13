@@ -1,0 +1,836 @@
+{
+  "pages": [
+    {
+      "page": 1,
+      "year": "",
+      "month": "",
+      "fields": [
+        {
+          "code": "",
+          "label": "Fis.:",
+          "reference": "",
+          "value": "316"
+        },
+        {
+          "code": "",
+          "label": "CNPJ:",
+          "reference": "",
+          "value": "SETEMBRO/2019"
+        },
+        {
+          "code": "",
+          "label": "SALARIO",
+          "reference": "",
+          "value": "953,36"
+        },
+        {
+          "code": "",
+          "label": "MES",
+          "reference": "",
+          "value": "200,43"
+        },
+        {
+          "code": "",
+          "label": "COMISSAO",
+          "reference": "",
+          "value": "173,68"
+        },
+        {
+          "code": "",
+          "label": "AMIL",
+          "reference": "",
+          "value": "5,00"
+        },
+        {
+          "code": "",
+          "label": "VARIAVEL",
+          "reference": "",
+          "value": "1.100,00"
+        },
+        {
+          "code": "",
+          "label": "REFEICAO",
+          "reference": "",
+          "value": "6,00"
+        },
+        {
+          "code": "",
+          "label": "PROVENTOS",
+          "reference": "",
+          "value": "2.227,04"
+        },
+        {
+          "code": "",
+          "label": "DESCONTOS",
+          "reference": "",
+          "value": "211,43"
+        },
+        {
+          "code": "",
+          "label": "RECEBER",
+          "reference": "2.015,61",
+          "value": "2"
+        },
+        {
+          "code": "",
+          "label": "CNPJ:",
+          "reference": "",
+          "value": "SETEMBRO/2019"
+        },
+        {
+          "code": "",
+          "label": "SALARIO",
+          "reference": "",
+          "value": "953,36"
+        },
+        {
+          "code": "",
+          "label": "MES",
+          "reference": "",
+          "value": "200,43"
+        },
+        {
+          "code": "",
+          "label": "COMISSAO",
+          "reference": "",
+          "value": "173,68"
+        },
+        {
+          "code": "",
+          "label": "AMIL",
+          "reference": "",
+          "value": "5,00"
+        },
+        {
+          "code": "",
+          "label": "VARIAVEL",
+          "reference": "",
+          "value": "1.100,00"
+        },
+        {
+          "code": "",
+          "label": "REFEICAO",
+          "reference": "",
+          "value": "6,00"
+        },
+        {
+          "code": "",
+          "label": "PROVENTOS",
+          "reference": "",
+          "value": "2.227,04"
+        },
+        {
+          "code": "",
+          "label": "DESCONTOS",
+          "reference": "",
+          "value": "211,43"
+        },
+        {
+          "code": "",
+          "label": "RECEBER",
+          "reference": "2.015,61",
+          "value": "5"
+        }
+      ],
+      "bases": []
+    },
+    {
+      "page": 2,
+      "year": "",
+      "month": "",
+      "fields": [
+        {
+          "code": "",
+          "label": "Fls.:",
+          "reference": "",
+          "value": "317"
+        },
+        {
+          "code": "",
+          "label": "CNPJ:",
+          "reference": "",
+          "value": "purusao/201"
+        },
+        {
+          "code": "",
+          "label": "SALARIO",
+          "reference": "",
+          "value": "1.300,00"
+        },
+        {
+          "code": "",
+          "label": "MES",
+          "reference": "",
+          "value": "339,73"
+        },
+        {
+          "code": "",
+          "label": "COMISSAO",
+          "reference": "",
+          "value": "288,46"
+        },
+        {
+          "code": "",
+          "label": "MES",
+          "reference": "",
+          "value": "63,35"
+        },
+        {
+          "code": "",
+          "label": "VARIAVEL",
+          "reference": "",
+          "value": "1.500,00"
+        },
+        {
+          "code": "",
+          "label": "AMIL",
+          "reference": "",
+          "value": "5,00"
+        },
+        {
+          "code": "",
+          "label": "QUINZENAL",
+          "reference": "",
+          "value": "520,00"
+        },
+        {
+          "code": "",
+          "label": "PROVENTOS",
+          "reference": "",
+          "value": "3.088,46"
+        },
+        {
+          "code": "",
+          "label": "DESCONTOS",
+          "reference": "",
+          "value": "928,08"
+        },
+        {
+          "code": "",
+          "label": "RECEBER",
+          "reference": "",
+          "value": "2.160,38"
+        },
+        {
+          "code": "",
+          "label": "CNPJ:",
+          "reference": "",
+          "value": "borusno/2018"
+        },
+        {
+          "code": "",
+          "label": "SALARIO",
+          "reference": "",
+          "value": "1.300,00"
+        },
+        {
+          "code": "",
+          "label": "MES",
+          "reference": "",
+          "value": "339,73"
+        },
+        {
+          "code": "",
+          "label": "COMISSAO",
+          "reference": "",
+          "value": "288,46"
+        },
+        {
+          "code": "",
+          "label": "MES",
+          "reference": "",
+          "value": "63,35"
+        },
+        {
+          "code": "",
+          "label": "VARIAVEL",
+          "reference": "",
+          "value": "1.500,00"
+        },
+        {
+          "code": "",
+          "label": "AMIL",
+          "reference": "",
+          "value": "5,00"
+        },
+        {
+          "code": "",
+          "label": "QUINZENAL",
+          "reference": "",
+          "value": "520,00"
+        },
+        {
+          "code": "",
+          "label": "PROVENTOS",
+          "reference": "",
+          "value": "3.088,46"
+        },
+        {
+          "code": "",
+          "label": "DESCONTOS",
+          "reference": "",
+          "value": "928,08"
+        },
+        {
+          "code": "",
+          "label": "RECEBER",
+          "reference": "",
+          "value": "2.160,38"
+        }
+      ],
+      "bases": []
+    },
+    {
+      "page": 3,
+      "year": "",
+      "month": "",
+      "fields": [
+        {
+          "code": "",
+          "label": "Fis.:",
+          "reference": "",
+          "value": "318"
+        },
+        {
+          "code": "",
+          "label": "SALARIO",
+          "reference": "",
+          "value": "1.126,65"
+        },
+        {
+          "code": "",
+          "label": "MES",
+          "reference": "",
+          "value": "250,71"
+        },
+        {
+          "code": "",
+          "label": "PATERNIDADE",
+          "reference": "",
+          "value": "173,36"
+        },
+        {
+          "code": "",
+          "label": "MES",
+          "reference": "",
+          "value": "47,33"
+        },
+        {
+          "code": "",
+          "label": "COMISSAO",
+          "reference": "",
+          "value": "285,71"
+        },
+        {
+          "code": "",
+          "label": "AMIL",
+          "reference": "",
+          "value": "5,00"
+        },
+        {
+          "code": "",
+          "label": "VARIAVEL",
+          "reference": "",
+          "value": "1.200,00"
+        },
+        {
+          "code": "",
+          "label": "AMIL",
+          "reference": "",
+          "value": "5,00"
+        },
+        {
+          "code": "",
+          "label": "REFEICAO",
+          "reference": "",
+          "value": "6,00"
+        },
+        {
+          "code": "",
+          "label": "QUINZENAL",
+          "reference": "",
+          "value": "520,00"
+        },
+        {
+          "code": "",
+          "label": "PROVENTOS",
+          "reference": "",
+          "value": "2.785,72"
+        },
+        {
+          "code": "",
+          "label": "DESCONTOS",
+          "reference": "",
+          "value": "834,04"
+        },
+        {
+          "code": "",
+          "label": "RECEBER",
+          "reference": "",
+          "value": "1.951,68"
+        },
+        {
+          "code": "",
+          "label": "CNPJ:",
+          "reference": "",
+          "value": "froveimno/2018"
+        },
+        {
+          "code": "",
+          "label": "SALARIO",
+          "reference": "",
+          "value": "1.126,65"
+        },
+        {
+          "code": "",
+          "label": "MES",
+          "reference": "",
+          "value": "250,71"
+        },
+        {
+          "code": "",
+          "label": "PATERNIDADE",
+          "reference": "",
+          "value": "173,36"
+        },
+        {
+          "code": "",
+          "label": "MES",
+          "reference": "",
+          "value": "47,33"
+        },
+        {
+          "code": "",
+          "label": "COMISSAO",
+          "reference": "",
+          "value": "285,71"
+        },
+        {
+          "code": "",
+          "label": "AMIL",
+          "reference": "",
+          "value": "5,00"
+        },
+        {
+          "code": "",
+          "label": "VARIAVEL",
+          "reference": "",
+          "value": "1.200,00"
+        },
+        {
+          "code": "",
+          "label": "AMIL",
+          "reference": "",
+          "value": "5,00"
+        },
+        {
+          "code": "",
+          "label": "REFEICAO",
+          "reference": "",
+          "value": "6,00"
+        },
+        {
+          "code": "",
+          "label": "QUINZENAL",
+          "reference": "",
+          "value": "520,00"
+        },
+        {
+          "code": "",
+          "label": "PROVENTOS",
+          "reference": "",
+          "value": "2.785,72"
+        },
+        {
+          "code": "",
+          "label": "DESCONTOS",
+          "reference": "",
+          "value": "834,04"
+        },
+        {
+          "code": "",
+          "label": "RECEBER",
+          "reference": "",
+          "value": "1.951,68"
+        }
+      ],
+      "bases": []
+    },
+    {
+      "page": 4,
+      "year": "",
+      "month": "",
+      "fields": [
+        {
+          "code": "",
+          "label": "Fis.:",
+          "reference": "",
+          "value": "319"
+        },
+        {
+          "code": "",
+          "label": "CNPJ:",
+          "reference": "",
+          "value": "Pexemsno/2019"
+        },
+        {
+          "code": "",
+          "label": "SALARIO",
+          "reference": "",
+          "value": "1.300,00"
+        },
+        {
+          "code": "",
+          "label": "MES",
+          "reference": "",
+          "value": "250,92"
+        },
+        {
+          "code": "",
+          "label": "COMISSAO",
+          "reference": "",
+          "value": "288,00"
+        },
+        {
+          "code": "",
+          "label": "INSS",
+          "reference": "",
+          "value": "13"
+        },
+        {
+          "code": "",
+          "label": "SALARIO",
+          "reference": "",
+          "value": "9,92"
+        },
+        {
+          "code": "",
+          "label": "VARIAVEL",
+          "reference": "",
+          "value": "1.200,00"
+        },
+        {
+          "code": "",
+          "label": "MES",
+          "reference": "",
+          "value": "19,04"
+        },
+        {
+          "code": "",
+          "label": "MEDIA",
+          "reference": "",
+          "value": "13"
+        },
+        {
+          "code": "",
+          "label": "SALARIO",
+          "reference": "",
+          "value": "124,00"
+        },
+        {
+          "code": "",
+          "label": "BRA",
+          "reference": "",
+          "value": "5,00"
+        },
+        {
+          "code": "",
+          "label": "BRA",
+          "reference": "",
+          "value": "5,00"
+        },
+        {
+          "code": "",
+          "label": "REFEICAO",
+          "reference": "",
+          "value": "6,00"
+        },
+        {
+          "code": "",
+          "label": "QUINZENAL",
+          "reference": "",
+          "value": "520,00"
+        },
+        {
+          "code": "",
+          "label": "PROVENTOS",
+          "reference": "",
+          "value": "2.912,00"
+        },
+        {
+          "code": "",
+          "label": "DESCONTOS",
+          "reference": "",
+          "value": "815,88"
+        },
+        {
+          "code": "",
+          "label": "RECEBER",
+          "reference": "2.096,12",
+          "value": "5"
+        },
+        {
+          "code": "",
+          "label": "CNPJ:",
+          "reference": "",
+          "value": "bezemmno/2018"
+        },
+        {
+          "code": "",
+          "label": "SALARIO",
+          "reference": "",
+          "value": "1.300,00"
+        },
+        {
+          "code": "",
+          "label": "MES",
+          "reference": "",
+          "value": "250,92"
+        },
+        {
+          "code": "",
+          "label": "COMISSAO",
+          "reference": "",
+          "value": "288,00"
+        },
+        {
+          "code": "",
+          "label": "INSS",
+          "reference": "",
+          "value": "13"
+        },
+        {
+          "code": "",
+          "label": "SALARIO",
+          "reference": "",
+          "value": "9,92"
+        },
+        {
+          "code": "",
+          "label": "VARIAVEL",
+          "reference": "",
+          "value": "1.200,00"
+        },
+        {
+          "code": "",
+          "label": "MES",
+          "reference": "",
+          "value": "19,04"
+        },
+        {
+          "code": "",
+          "label": "MEDIA",
+          "reference": "",
+          "value": "13"
+        },
+        {
+          "code": "",
+          "label": "SALARIO",
+          "reference": "",
+          "value": "124,00"
+        },
+        {
+          "code": "",
+          "label": "BRA",
+          "reference": "",
+          "value": "5,00"
+        },
+        {
+          "code": "",
+          "label": "BRA",
+          "reference": "",
+          "value": "5,00"
+        },
+        {
+          "code": "",
+          "label": "REFEICAO",
+          "reference": "",
+          "value": "6,00"
+        },
+        {
+          "code": "",
+          "label": "QUINZENAL",
+          "reference": "",
+          "value": "520,00"
+        },
+        {
+          "code": "",
+          "label": "PROVENTOS",
+          "reference": "",
+          "value": "2.912,00"
+        },
+        {
+          "code": "",
+          "label": "DESCONTOS",
+          "reference": "",
+          "value": "815,88"
+        },
+        {
+          "code": "",
+          "label": "RECEBER",
+          "reference": "2.096,12",
+          "value": "3"
+        }
+      ],
+      "bases": []
+    },
+    {
+      "page": 5,
+      "year": "",
+      "month": "",
+      "fields": [
+        {
+          "code": "",
+          "label": "Fis.:",
+          "reference": "",
+          "value": "320"
+        },
+        {
+          "code": "",
+          "label": "CNPJ:",
+          "reference": "",
+          "value": "Paqereo/2020"
+        },
+        {
+          "code": "",
+          "label": "SALARIO",
+          "reference": "",
+          "value": "1.300,00"
+        },
+        {
+          "code": "",
+          "label": "MES",
+          "reference": "",
+          "value": "200,70"
+        },
+        {
+          "code": "",
+          "label": "COMISSAO",
+          "reference": "",
+          "value": "180,00"
+        },
+        {
+          "code": "",
+          "label": "BRA",
+          "reference": "",
+          "value": "5,00"
+        },
+        {
+          "code": "",
+          "label": "VARIAVEL",
+          "reference": "",
+          "value": "750,00"
+        },
+        {
+          "code": "",
+          "label": "BRA",
+          "reference": "",
+          "value": "10,00"
+        },
+        {
+          "code": "",
+          "label": "REFEICAO",
+          "reference": "",
+          "value": "6,00"
+        },
+        {
+          "code": "",
+          "label": "QUINZENAL",
+          "reference": "",
+          "value": "520,00"
+        },
+        {
+          "code": "",
+          "label": "PROVENTOS",
+          "reference": "",
+          "value": "2.230,00"
+        },
+        {
+          "code": "",
+          "label": "DESCONTOS",
+          "reference": "",
+          "value": "741,70"
+        },
+        {
+          "code": "",
+          "label": "RECEBER",
+          "reference": "",
+          "value": "1.488,30"
+        },
+        {
+          "code": "",
+          "label": "CNPJ:",
+          "reference": "",
+          "value": "FAMETRO/2020"
+        },
+        {
+          "code": "",
+          "label": "SALARIO",
+          "reference": "",
+          "value": "1.300,00"
+        },
+        {
+          "code": "",
+          "label": "MES",
+          "reference": "",
+          "value": "200,70"
+        },
+        {
+          "code": "",
+          "label": "COMISSAO",
+          "reference": "",
+          "value": "180,00"
+        },
+        {
+          "code": "",
+          "label": "BRA",
+          "reference": "",
+          "value": "5,00"
+        },
+        {
+          "code": "",
+          "label": "VARIAVEL",
+          "reference": "",
+          "value": "750,00"
+        },
+        {
+          "code": "",
+          "label": "BRA",
+          "reference": "",
+          "value": "10,00"
+        },
+        {
+          "code": "",
+          "label": "REFEICAO",
+          "reference": "",
+          "value": "6,00"
+        },
+        {
+          "code": "",
+          "label": "QUINZENAL",
+          "reference": "",
+          "value": "520,00"
+        },
+        {
+          "code": "",
+          "label": "PROVENTOS",
+          "reference": "",
+          "value": "2.230,00"
+        },
+        {
+          "code": "",
+          "label": "DESCONTOS",
+          "reference": "",
+          "value": "741,70"
+        },
+        {
+          "code": "",
+          "label": "RECEBER",
+          "reference": "",
+          "value": "1.488,30"
+        }
+      ],
+      "bases": []
+    }
+  ]
+}
