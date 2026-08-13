@@ -33,18 +33,29 @@ export interface PageResult {
   ocrConfidence: number | null; // confianca media (0-100) quando veio de OCR
 }
 
+// Timeout de seguranca por comando: em CPU muito fraca/compartilhada
+// (planos gratuitos de deploy) o OCR pode ser bem mais lento que num
+// ambiente de desenvolvimento normal, mas nunca deve ficar pendurado para
+// sempre — apos esse tempo o comando e encerrado e o erro sobe como
+// "erro" na transcricao, em vez de travar o job silenciosamente.
+const TIMEOUT_MS = 120_000;
+
 async function run(cmd: string, args: string[], env?: NodeJS.ProcessEnv): Promise<string> {
   try {
     const { stdout } = await execFileAsync(cmd, args, {
       encoding: "utf-8",
       maxBuffer: 1024 * 1024 * 64,
       env: env ?? process.env,
+      timeout: TIMEOUT_MS,
     });
     return stdout;
   } catch (e) {
-    const err = e as NodeJS.ErrnoException & { stderr?: string };
+    const err = e as NodeJS.ErrnoException & { stderr?: string; killed?: boolean; signal?: string };
     if (err.code === "ENOENT") {
       throw new Error(`Falha ao executar ${cmd}: comando nao encontrado no sistema.`);
+    }
+    if (err.killed && err.signal === "SIGTERM") {
+      throw new Error(`Falha ao executar ${cmd}: excedeu o tempo limite de ${TIMEOUT_MS / 1000}s.`);
     }
     throw new Error(`Falha ao executar ${cmd}: ${err.stderr || err.message}`);
   }
@@ -77,7 +88,13 @@ async function ocrPage(pdfPath: string, page: number): Promise<{ text: string; c
   const tmpDir = fs.mkdtempSync(path.join(os.tmpdir(), "qf-ocr-"));
   try {
     const imgBase = path.join(tmpDir, "page");
-    // 300 DPI: bom equilibrio entre qualidade de OCR e tempo de processamento.
+    // 300 DPI: testado contra 200 DPI e a diferenca de qualidade e real —
+    // com 200 DPI, o OCR do cartao de ponto voltou a errar a leitura do
+    // dia-da-semana colado ao numero do dia e de colunas de resumo (bugs
+    // ja corrigidos, ver PROCESSO.md). Mantendo 300 DPI e confiando no
+    // timeout de seguranca acima + no tempo de espera maior do frontend
+    // para lidar com CPU mais lenta, em vez de trocar precisao por
+    // velocidade.
     await run("pdftoppm", ["-png", "-r", "300", "-f", String(page), "-l", String(page), pdfPath, imgBase]);
     const files = fs.readdirSync(tmpDir).filter((f) => f.startsWith("page"));
     if (files.length === 0) throw new Error(`Falha ao rasterizar pagina ${page} para OCR`);

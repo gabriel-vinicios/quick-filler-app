@@ -14,12 +14,20 @@ Sem Docker (desenvolvimento):
 
 ```
 npm install
-npm run build && npm start
+npm run dev
 ```
 
-Fora do Docker, o OCR em português depende de você ter o Tesseract instalado
-no sistema com o idioma `por` — no Docker isso é resolvido no build da
-imagem (ver `Dockerfile`).
+Fora do Docker, a aplicação depende de dois pacotes de sistema que o
+`Dockerfile` instala sozinho dentro da imagem, mas que **você precisa
+instalar manualmente na sua máquina** para rodar com `npm run dev`/`npm
+start`: **poppler-utils** (fornece `pdfinfo`/`pdftotext`/`pdftoppm`, usados
+em todo PDF, com ou sem OCR) e **Tesseract** com o idioma português. Sem
+eles, qualquer upload falha com erro tipo `Falha ao executar pdfinfo:
+comando nao encontrado no sistema`.
+
+- macOS: `brew install poppler tesseract tesseract-lang`
+- Debian/Ubuntu: `sudo apt install poppler-utils tesseract-ocr tesseract-ocr-por`
+- Windows: mais simples rodar via Docker, ou usar o WSL e seguir o comando do Ubuntu acima.
 
 ## Stack
 
@@ -90,14 +98,24 @@ primeiro em produção".
 
 ## O que quebra primeiro em produção
 
-O processamento assíncrono roda **dentro do mesmo processo Node**, sem fila
-externa. Se o processo reiniciar (deploy, crash, OOM) enquanto um documento
-está `processando`, aquele job fica preso nesse estado para sempre — não há
+O processamento roda **dentro do mesmo processo Node**, sem fila externa.
+Se o processo reiniciar (deploy, crash, OOM) enquanto um documento está
+`processando`, aquele job fica preso nesse estado para sempre — não há
 persistência do "trabalho pendente", só do resultado. Em produção de
 verdade isso vira uma fila real (Redis/BullMQ, SQS) com um worker separado,
 que sobrevive a reinícios e permite escalar horizontalmente. Também não há
 limite de concorrência: uploads simultâneos demais processam tudo ao mesmo
-tempo e competem por CPU (o Tesseract é pesado), sem fila de prioridade.
+tempo e competem por CPU (o Tesseract é pesado), sem fila de prioridade —
+com uploads suficientes ao mesmo tempo, o tempo de resposta de cada um
+degrada, mesmo que o servidor continue respondendo (ver nota abaixo).
+
+**Nota**: todas as chamadas a `pdftotext`/`pdftoppm`/`tesseract` são
+assíncronas (`execFile` promisificado, não `spawnSync`) — isso não é o
+mesmo que ter fila/concorrência controlada, mas evita o problema mais
+grave, que é o processo inteiro travar e parar de responder a *qualquer*
+requisição (inclusive o healthcheck) enquanto uma página escaneada
+processa. Essa era, inclusive, a versão original desta seção — o bug foi
+descoberto e corrigido depois do primeiro deploy real; ver `PROCESSO.md`.
 
 ## Onde não confio
 

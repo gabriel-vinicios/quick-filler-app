@@ -141,6 +141,75 @@ vez — são ambientes diferentes (`node:20-bookworm-slim` minimalista e um
 tinha tudo instalado e nunca passou por um `git add`) e só um deploy real
 expõe esse tipo de lacuna.
 
+## Bug em produção: OCR síncrono travava o servidor inteiro
+
+Com o app já publicado e no ar, ao enviar o `payroll-04.pdf` (o holerite
+escaneado, que precisa de OCR em 5 páginas), a aplicação passou a dar
+"Não foi possível conectar ao servidor" e a Render começou a devolver
+`502`. Depois de reiniciar, a transcrição que tinha sido criada não era
+mais encontrada.
+
+10. **`spawnSync` no pipeline de OCR bloqueava o event loop inteiro do
+    Node.** `pdfSource.ts` chamava `pdftoppm`/`tesseract` de forma
+    **síncrona** (`spawnSync`). Enquanto uma página escaneada processava
+    (o que pode levar vários segundos), o processo Node ficava incapaz de
+    responder a **qualquer** outra requisição — inclusive o próprio
+    healthcheck da plataforma de deploy. A Render, sem resposta do
+    healthcheck, reiniciava o container; como o disco não é persistente
+    no free tier, a transcrição em andamento se perdia. Esse não era um
+    problema só do arquivo maior — era um bug de arquitetura que travaria
+    o servidor para *qualquer* usuário simultâneo, não só para quem
+    enviou o PDF pesado. Corrigido trocando todas as chamadas de
+    `spawnSync` por `execFile` assíncrono (via `util.promisify`), e
+    propagando `async`/`await` pelos dois extratores e pelo processamento
+    em segundo plano.
+
+    Validado de forma objetiva, não só "parece ter funcionado": subi o
+    servidor localmente, disparei o processamento do `payroll-04.pdf` e,
+    enquanto ele ainda estava rodando (confirmado pelo status
+    `"processando"`), bombardeei `/healthz` 25 vezes em sequência — todas
+    voltaram `200` em menos de 60ms cada. Antes da correção, essas
+    chamadas ficariam penduradas até o OCR terminar.
+
+## "Está demorando mais que o esperado": lentidão em CPU fraca, não bug
+
+Depois da correção anterior, o usuário relatou que o frontend passou a
+mostrar "O processamento está demorando mais que o esperado" ao enviar
+`payroll-04.pdf` e `time-card-02.pdf` — os dois documentos que precisam de
+OCR. Isso não era mais o servidor travado (já corrigido): era o frontend
+desistindo de esperar cedo demais, porque o processamento em si estava
+demorando mais do que no ambiente de desenvolvimento — plausivelmente por
+causa da CPU bem mais fraca/compartilhada do plano gratuito de deploy
+(Tesseract e um trabalho pesado de CPU).
+
+Duas mudanças, uma delas revertida:
+
+11. **Tempo de espera do frontend aumentado de 90s para 8 minutos**, com
+    mensagem de progresso mostrando o tempo decorrido, e — se mesmo assim
+    estourar — um link para a página de revisão em vez de um beco sem
+    saída (o processamento continua rodando no servidor mesmo depois que o
+    frontend desiste de esperar; o job nao é cancelado).
+12. **Tentativa de reduzir a resolução do OCR de 300 para 200 DPI para
+    acelerar o processamento — testada e revertida.** A hipótese fazia
+    sentido (menos pixels = Tesseract mais rápido), e de fato reduziu o
+    tempo do `payroll-04.pdf` de volta a poucos segundos. Mas testar contra
+    o `time-card-02.pdf` mostrou uma regressão real: com 200 DPI, 3 dias
+    que antes liam perfeitamente voltaram a ter contagens de batida
+    erradas — a resolução mais baixa piorou o OCR o suficiente para
+    reintroduzir os bugs de "dia colado ao dia da semana" e "coluna de
+    resumo vazando" descritos mais acima (a leitura do cabeçalho da tabela,
+    de que a correção da coluna de resumo depende, ficou pior). Como
+    precisão dos dados pesa mais que velocidade aqui, revertido para 300
+    DPI. Em vez disso, foi adicionado um **timeout de 120s por comando**
+    (`pdftotext`/`pdftoppm`/`tesseract`) — não acelera nada, mas garante
+    que um comando nunca fica pendurado indefinidamente; se estourar, vira
+    um erro claro na transcrição em vez de um travamento silencioso.
+
+Vale o registro: a correção óbvia/rápida (baixar a resolução) tinha um
+custo real que só apareceu testando contra um documento diferente do que
+motivou a mudança — testar só o caso que gerou a reclamação não seria
+suficiente aqui.
+
 ## O que reescrevi/ajustei manualmente (fora do agente)
 
 Nada foi editado por mim fora da conversa — toda a solução, incluindo as
