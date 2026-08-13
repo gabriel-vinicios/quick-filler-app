@@ -47,7 +47,8 @@ RUN printf '#!/bin/sh\nset -e\nexport TESSDATA_PREFIX=$(find / -maxdepth 6 -type
 COPY --from=build /app/.next/standalone ./
 COPY --from=build /app/.next/static ./.next/static
 COPY --from=build /app/public ./public
- 
+
+ENV HOSTNAME="0.0.0.0"
 ENV PORT=3000
 ENV DATA_DIR=/data
 RUN mkdir -p /data
