@@ -106,6 +106,41 @@ conferia campo a campo mas não essa característica estrutural (sequência
 contínua de dias, contagem de batida por dia). As planilhas em
 `entregaveis/planilhas/` já refletem essas correções.
 
+## Deploy: 2 bugs que só apareceram num Docker/Git de verdade
+
+O sandbox onde a solução foi construída não tinha Docker disponível, então
+o `Dockerfile` nunca tinha sido buildado de verdade, nem o repositório
+clonado de um Git remoto, antes do deploy na Render:
+
+8. **`ca-certificates` faltando na imagem `node:20-bookworm-slim`.** A
+   imagem "slim" não vem com o bundle de certificados raiz — sem isso, o
+   `curl` não consegue validar o certificado HTTPS do GitHub e falha com
+   `exit code 77` (`Problem with the SSL CA cert`). Diagnosticado direto
+   pelo código de saída do erro nos logs da Render; a correção foi
+   adicionar `ca-certificates` à lista de pacotes instalados via
+   `apt-get`, e trocar as flags do `curl` de `-sL` para `-fsSL` (o `-f`
+   faz o build falhar alto se o download retornar erro HTTP, em vez de
+   silenciosamente salvar uma página de erro como se fosse o arquivo do
+   modelo — outra forma do mesmo princípio de "nunca aceitar dado ruim
+   calado").
+9. **Pasta `public/` vazia não foi versionada pelo Git, quebrando o
+   `COPY` no Dockerfile.** O projeto nunca teve nenhum arquivo estático
+   dentro de `public/` — a pasta existia localmente, mas o Git não
+   versiona diretórios vazios. Ao dar `git push`, a pasta simplesmente não
+   foi para o repositório remoto, e a Render, ao clonar o código, falhava
+   o build com `"/app/public": not found` na etapa `COPY --from=build
+   /app/public ./public`. Corrigido colocando um `robots.txt` mínimo
+   dentro de `public/`, garantindo que a pasta sempre tenha conteúdo e o
+   Git a rastreie.
+
+Vale registrar a lição comum aos dois: testar `npm run build`, os
+extratores e a API localmente (o que foi feito extensivamente) não
+substitui buildar a imagem a partir de um clone Git real pelo menos uma
+vez — são ambientes diferentes (`node:20-bookworm-slim` minimalista e um
+`git clone` limpo vs. o sistema do sandbox de desenvolvimento, que já
+tinha tudo instalado e nunca passou por um `git add`) e só um deploy real
+expõe esse tipo de lacuna.
+
 ## O que reescrevi/ajustei manualmente (fora do agente)
 
 Nada foi editado por mim fora da conversa — toda a solução, incluindo as
