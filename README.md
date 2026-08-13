@@ -1,3 +1,11 @@
+# Quick Filler — Transcrição de Holerites e Cartões de Ponto
+
+Aplicação web que recebe um holerite ou cartão de ponto em PDF (nativo ou escaneado), transcreve para dados estruturados, permite revisar e corrigir lado a lado com o PDF original, e exporta a planilha final.
+
+```
+enviar PDF  →  processar  →  revisar a transcrição  →  baixar a planilha
+```
+
 ## Stack
 
 - **Next.js 14 (App Router) + TypeScript** — API e interface no mesmo serviço
@@ -62,20 +70,23 @@ Contrato completo dos formatos de dados no [enunciado do desafio](https://github
 - [`PROCESSO.md`](./PROCESSO.md) — uso de IA no desenvolvimento, erros encontrados e corrigidos, respostas às perguntas do desafio
 
 ## Estrutura
+
+```
 src/
-app/ # rotas (páginas + API)
-api/transcricoes/ # POST, GET, PUT, /planilha, /pdf
-healthz/
-page.tsx # upload
-revisao/[id]/page.tsx # revisão (PDF + tabela editável)
-lib/
-extract/
-cartaoPonto.ts # extrator de cartão de ponto
-holerite.ts # extrator de holerite
-pdfSource.ts # leitura de PDF + fallback de OCR
-textUtils.ts # parsing de colunas/valores
-spreadsheet.ts # geração de .xlsx/.csv
-warnings.ts # avisos derivados (nunca armazenados)
-store.ts # persistência em arquivo
-process.ts # processamento assíncrono
-exemplos/ # PDFs de exemplo do desafio
+  app/                      # rotas (páginas + API)
+    api/transcricoes/       # POST, GET, PUT, /planilha, /pdf
+    healthz/
+    page.tsx                # upload
+    revisao/[id]/page.tsx   # revisão (PDF + tabela editável)
+  lib/
+    extract/
+      cartaoPonto.ts        # extrator de cartão de ponto
+      holerite.ts           # extrator de holerite
+      pdfSource.ts           # leitura de PDF + fallback de OCR
+      textUtils.ts            # parsing de colunas/valores
+    spreadsheet.ts             # geração de .xlsx/.csv
+    warnings.ts                  # avisos derivados (nunca armazenados)
+    store.ts                       # persistência em arquivo
+    process.ts                       # processamento assíncrono
+exemplos/                            # PDFs de exemplo do desafio
+```
