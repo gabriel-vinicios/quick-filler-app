@@ -1,4 +1,5 @@
-import { spawnSync } from "node:child_process";
+import { execFile } from "node:child_process";
+import { promisify } from "node:util";
 import fs from "node:fs";
 import os from "node:os";
 import path from "node:path";
@@ -8,6 +9,17 @@ import path from "node:path";
 // Escolha deliberada: poppler + Tesseract sao livres, rodam offline dentro
 // do container (sem depender de uma API paga) e cobrem os dois casos que o
 // desafio pede (texto nativo e escaneado). Ver SOLUCAO.md.
+//
+// IMPORTANTE: todas as chamadas a esses binarios sao ASSINCRONAS
+// (execFile + promisify, nao spawnSync). Uma pagina escaneada pode levar
+// varios segundos de OCR; se essa chamada fosse sincrona, ela travaria o
+// event loop do Node inteiro — o processo ficaria incapaz de responder a
+// QUALQUER outra requisicao (nem o proprio healthcheck) ate o OCR
+// terminar. Isso ja causou uma queda em producao (ver PROCESSO.md): a
+// plataforma de deploy, sem resposta do healthcheck durante o OCR,
+// reiniciou o container e a transcricao em andamento se perdeu.
+
+const execFileAsync = promisify(execFile);
 
 // TESSDATA_PREFIX deve apontar diretamente para a pasta que contem os
 // arquivos .traineddata (eng.traineddata, por.traineddata). No Docker essa
@@ -21,24 +33,32 @@ export interface PageResult {
   ocrConfidence: number | null; // confianca media (0-100) quando veio de OCR
 }
 
-function run(cmd: string, args: string[]): { stdout: string; status: number } {
-  const res = spawnSync(cmd, args, { encoding: "utf-8", maxBuffer: 1024 * 1024 * 64 });
-  if (res.error) {
-    throw new Error(`Falha ao executar ${cmd}: ${res.error.message}`);
+async function run(cmd: string, args: string[], env?: NodeJS.ProcessEnv): Promise<string> {
+  try {
+    const { stdout } = await execFileAsync(cmd, args, {
+      encoding: "utf-8",
+      maxBuffer: 1024 * 1024 * 64,
+      env: env ?? process.env,
+    });
+    return stdout;
+  } catch (e) {
+    const err = e as NodeJS.ErrnoException & { stderr?: string };
+    if (err.code === "ENOENT") {
+      throw new Error(`Falha ao executar ${cmd}: comando nao encontrado no sistema.`);
+    }
+    throw new Error(`Falha ao executar ${cmd}: ${err.stderr || err.message}`);
   }
-  return { stdout: res.stdout ?? "", status: res.status ?? 1 };
 }
 
-export function getPageCount(pdfPath: string): number {
-  const { stdout } = run("pdfinfo", [pdfPath]);
+export async function getPageCount(pdfPath: string): Promise<number> {
+  const stdout = await run("pdfinfo", [pdfPath]);
   const m = stdout.match(/^Pages:\s*(\d+)/m);
   if (!m) throw new Error("Nao foi possivel ler o numero de paginas do PDF");
   return Number(m[1]);
 }
 
-function getLayoutText(pdfPath: string, page: number): string {
-  const { stdout } = run("pdftotext", ["-layout", "-f", String(page), "-l", String(page), pdfPath, "-"]);
-  return stdout;
+async function getLayoutText(pdfPath: string, page: number): Promise<string> {
+  return run("pdftotext", ["-layout", "-f", String(page), "-l", String(page), pdfPath, "-"]);
 }
 
 /** Um "texto" e considerado presente se sobrarem caracteres alfanumericos
@@ -53,21 +73,19 @@ function hasMeaningfulText(text: string): boolean {
   return hasMoneyOrTime;
 }
 
-function ocrPage(pdfPath: string, page: number): { text: string; confidence: number } {
+async function ocrPage(pdfPath: string, page: number): Promise<{ text: string; confidence: number }> {
   const tmpDir = fs.mkdtempSync(path.join(os.tmpdir(), "qf-ocr-"));
   try {
     const imgBase = path.join(tmpDir, "page");
     // 300 DPI: bom equilibrio entre qualidade de OCR e tempo de processamento.
-    run("pdftoppm", ["-png", "-r", "300", "-f", String(page), "-l", String(page), pdfPath, imgBase]);
+    await run("pdftoppm", ["-png", "-r", "300", "-f", String(page), "-l", String(page), pdfPath, imgBase]);
     const files = fs.readdirSync(tmpDir).filter((f) => f.startsWith("page"));
     if (files.length === 0) throw new Error(`Falha ao rasterizar pagina ${page} para OCR`);
     const imgPath = path.join(tmpDir, files[0]);
 
     const outBase = path.join(tmpDir, "out");
     const env = { ...process.env, TESSDATA_PREFIX: TESSDATA_DIR };
-    const args = [imgPath, outBase, "-l", "por+eng", "--psm", "6", "tsv"];
-    const res = spawnSync("tesseract", args, { encoding: "utf-8", env, maxBuffer: 1024 * 1024 * 64 });
-    if (res.error) throw new Error(`Falha ao executar tesseract: ${res.error.message}`);
+    await run("tesseract", [imgPath, outBase, "-l", "por+eng", "--psm", "6", "tsv"], env);
 
     const tsv = fs.readFileSync(`${outBase}.tsv`, "utf-8");
     return tsvToLayoutText(tsv);
@@ -157,11 +175,11 @@ export function maskUncertainDigits(value: string, confidence: number | null): s
   return value.replace(/\d/g, "?");
 }
 
-export function readPage(pdfPath: string, page: number): PageResult {
-  const nativeText = getLayoutText(pdfPath, page);
+export async function readPage(pdfPath: string, page: number): Promise<PageResult> {
+  const nativeText = await getLayoutText(pdfPath, page);
   if (hasMeaningfulText(nativeText)) {
     return { text: nativeText, scanned: false, ocrConfidence: null };
   }
-  const { text, confidence } = ocrPage(pdfPath, page);
+  const { text, confidence } = await ocrPage(pdfPath, page);
   return { text, scanned: true, ocrConfidence: confidence };
 }

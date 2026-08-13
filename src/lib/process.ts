@@ -9,11 +9,11 @@ import type { Transcricao } from "./types";
 // em producao (reinicio do processo no meio de um processamento perde o
 // job; a fila deveria ser externa — Redis/SQS — antes de escalar).
 export function processarEmSegundoPlano(id: string): void {
-  setTimeout(() => {
+  setTimeout(async () => {
     const t = buscar(id);
     if (!t) return;
     try {
-      const value = t.tipo === "cartao-ponto" ? extractCartaoPonto(t.pdfPath) : extractHolerite(t.pdfPath);
+      const value = t.tipo === "cartao-ponto" ? await extractCartaoPonto(t.pdfPath) : await extractHolerite(t.pdfPath);
       const atualizado: Transcricao = { ...t, status: "concluido", value, erro: null };
       salvar(atualizado);
     } catch (e) {
